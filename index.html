@@ -1,6 +1,34 @@
 <html>
   <head>
     <title>CGPA Calculator</title>
+    <style>
+      /* Add some style to the website */
+      body {
+        font-family: sans-serif;
+        width: 500px;
+        margin: auto;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      .cgpa {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <h1>CGPA Calculator</h1>
@@ -22,7 +50,7 @@
       <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
     </form> 
     <br>
-    <p id="result"></p>
+    <p class="cgpa" id="result"></p>
     
     <script>
       // Keep track of the number of courses
@@ -64,4 +92,3 @@
     </script>
   </body>
 </html>
-
