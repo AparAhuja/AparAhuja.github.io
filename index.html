@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>CGPA Calculator</title>
+  </head>
+  <body>
+    <h1>CGPA Calculator</h1>
+    <form>
+      <table id="courses">
+        <tr>
+          <th>Course</th>
+          <th>Credits</th>
+          <th>Grade</th>
+        </tr>
+        <tr>
+          <td>Course 1</td>
+          <td><input type="text" class="credits"></td>
+          <td><input type="text" class="grade"></td>
+        </tr>
+      </table>
+      <button type="button" onclick="addCourse()">Add course</button>
+      <br><br>
+      <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+    </form> 
+    <br>
+    <p id="result"></p>
+    
+    <script>
+      // Keep track of the number of courses
+      var numCourses = 1;
+      
+      // Add a new course row to the table
+      function addCourse() {
+        numCourses++;
+        var table = document.getElementById("courses");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = "Course " + numCourses;
+        cell2.innerHTML = "<input type='text' class='credits'>";
+        cell3.innerHTML = "<input type='text' class='grade'>";
+      }
+      
+      // Calculate the CGPA
+      function calculateCGPA() {
+        // Initialize the total number of credits and GPA
+        var totalCredits = 0;
+        var totalGPA = 0;
+        
+        // Get the values of the input fields
+        var creditsElements = document.getElementsByClassName("credits");
+        var gradeElements = document.getElementsByClassName("grade");
+        for (var i = 0; i < numCourses; i++) {
+          totalCredits += parseInt(creditsElements[i].value);
+          totalGPA += parseInt(creditsElements[i].value) * parseFloat(gradeElements[i].value);
+        }
+        
+        // Calculate the CGPA
+        var cgpa = totalGPA / totalCredits;
+        
+        // Display the result
+        document.getElementById("result").innerHTML = "Your CGPA is: " + cgpa.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
+
