@@ -5,17 +5,6 @@
     <link rel="stylesheet" href="css/cgpa.css">
   </head>
   <body>
-    <?php
-    // Start the session
-    session_start();
-
-    // Check if the user is logged in
-    if (!isset($_SESSION["loggedIn"]) || !$_SESSION["loggedIn"]) {
-      // Include the login form
-      include "login_form.php";
-      exit();
-    }
-    ?>
     <h1>CGPA Calculator</h1>
     <form>
       <table id="courses">
