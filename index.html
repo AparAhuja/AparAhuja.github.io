@@ -1,125 +1,17 @@
 <html>
   <head>
-    <title>CGPA Calculator</title>
-    <style>
-      /* Add some style to the website */
-      body {
-        font-family: 'Montserrat', sans-serif;
-        width: 500px;
-        margin: auto;
-        text-align: center;
-        background: linear-gradient(to right, #bbbbbb, #555555);
-        color: #333333;
-      }
-
-      h1 {
-        margin-bottom: 20px;
-      }
-
-      table {
-        border-collapse: collapse;
-        margin: auto;
-      }
-
-      td, th {
-        border: 1px solid #dddddd;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      .cgpa {
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 20px;
-      }
-
-      button {
-        background-color: #ffffff;
-        color: #333333;
-        padding: 16px 32px;
-        border: 1px solid #333333;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      #courses {
-        background-color: #ffffff;
-      }
-
-      /* Add a gradient shading effect to the website */
-      .gradient-shading {
-        background: linear-gradient(to right, #ffffff, #000000);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-
-
-    </style>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
-    <h1>CGPA Calculator</h1>
-    <form>
-      <table id="courses">
-        <tr>
-          <th>Course</th>
-          <th>Credits</th>
-          <th>Grade</th>
-        </tr>
-        <tr>
-          <td>Course 1</td>
-          <td><input type="text" class="credits" value="4"></td>
-          <td><input type="text" class="grade"></td>
-        </tr>
-      </table>
-      <br><br>
-      <button type="button" onclick="addCourse()">Add course</button>
-      <br><br><br>
-      <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
-    </form> 
-    <br>
-    <p class="cgpa" id="result"></p>
-    
-    <script>
-      // Keep track of the number of courses
-      var numCourses = 1;
-      
-      // Add a new course row to the table
-      function addCourse() {
-        numCourses++;
-        var table = document.getElementById("courses");
-        var row = table.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        cell1.innerHTML = "Course " + numCourses;
-        cell2.innerHTML = "<input type='text' class='credits' value='4'>";
-        cell3.innerHTML = "<input type='text' class='grade'>";
-      }
-      
-      // Calculate the CGPA
-      function calculateCGPA() {
-        // Initialize the total number of credits and GPA
-        var totalCredits = 0;
-        var totalGPA = 0;
-        
-        // Get the values of the input fields
-        var creditsElements = document.getElementsByClassName("credits");
-        var gradeElements = document.getElementsByClassName("grade");
-        for (var i = 0; i < numCourses; i++) {
-          totalCredits += parseInt(creditsElements[i].value);
-          totalGPA += parseInt(creditsElements[i].value) * parseFloat(gradeElements[i].value);
-        }
-        
-        // Calculate the CGPA
-        var cgpa = totalGPA / totalCredits;
-        
-        // Display the result
-        document.getElementById("result").innerHTML = "Your CGPA is: " + cgpa.toFixed(2);
-      }
-    </script>
+    <h1>Login</h1>
+    <form action="login.php" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="js/login.js"></script>
   </body>
 </html>
