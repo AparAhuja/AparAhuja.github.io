@@ -5,7 +5,7 @@ function validateForm() {
   var password = document.getElementById("password").value;
 
   // Check if the username and password are correct
-  if (username === "anjali" && password === "anjali") {
+  if (username === "apar" && password === "apar") {
 
     // Redirect to the CGPA calculator page
     window.location.href = "cgpa.html";
