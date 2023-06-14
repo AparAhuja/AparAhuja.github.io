@@ -1,17 +1,38 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
-  </head>
-  <body>
-    <h1>Login</h1>
-    <form action="cgpa.html" onsubmit="return validateForm()">
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br>
-      <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password"><br><br>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="js/login.js"></script>
-  </body>
+<head>
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Welcome to My Portfolio</h1>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <img src="images/project1.jpg" alt="Project 1">
+      <h3>Project 1 Title</h3>
+      <p>Description of Project 1.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <div class="project">
+      <img src="images/project2.jpg" alt="Project 2">
+      <h3>Project 2 Title</h3>
+      <p>Description of Project 2.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- Add more project divs as needed -->
+  </section>
+</body>
 </html>
