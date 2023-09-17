@@ -67,17 +67,11 @@
                             >
                                 <option selected>Select a Node by ID</option>
                                 
-                                    <option value="module1">module1</option>
+                                    <option value="bar">bar</option>
                                 
-                                    <option value="main.py">main.py</option>
+                                    <option value="baz">baz</option>
                                 
-                                    <option value="module2.py">module2.py</option>
-                                
-                                    <option value="module1.py">module1.py</option>
-                                
-                                    <option value="module2">module2</option>
-                                
-                                    <option value="main">main</option>
+                                    <option value="foo">foo</option>
                                 
                             </select>
                         </div>
@@ -131,8 +125,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#FFDEB4", "font": {"color": "black"}, "id": "module1", "label": "module1", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "main.py", "label": "main.py", "shape": "circle", "size": 25, "title": "SUMMARY 11"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "module2.py", "label": "module2.py", "shape": "circle", "size": 25, "title": "SUMMARY 33"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "module1.py", "label": "module1.py", "shape": "circle", "size": 25, "title": "SUMMARY 22fvabdfk vbajdf\nbvladf vlkabf lkv baklbfvl\nabdfv kjbafl vbadbvj\nkladb vjabv"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "module2", "label": "module2", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "main", "label": "main", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}]);
-                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "main", "to": "main.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "module1.py", "to": "main.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "module1", "to": "module1.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "module2.py", "to": "module1.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "module2", "to": "module2.py", "width": 3}]);
+                  nodes = new vis.DataSet([{"color": "#FFDEB4", "font": {"color": "black"}, "id": "bar", "label": "bar", "shape": "circle", "size": 40, "title": "bar"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "baz", "label": "baz", "shape": "circle", "size": 40, "title": "baz"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "foo", "label": "foo", "shape": "circle", "size": 40, "title": "foo"}]);
+                  edges = new vis.DataSet([]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
