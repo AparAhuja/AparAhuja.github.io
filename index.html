@@ -67,17 +67,17 @@
                             >
                                 <option selected>Select a Node by ID</option>
                                 
-                                    <option value="module1">module1</option>
+                                    <option value="data_extraction">data_extraction</option>
                                 
-                                    <option value="main.py">main.py</option>
+                                    <option value="countplots.py">countplots.py</option>
                                 
-                                    <option value="module2.py">module2.py</option>
+                                    <option value="cartograms.py.py">cartograms.py.py</option>
                                 
-                                    <option value="module1.py">module1.py</option>
+                                    <option value="histograms.py">histograms.py</option>
                                 
-                                    <option value="module2">module2</option>
+                                    <option value="graphs">graphs</option>
                                 
-                                    <option value="main">main</option>
+                                    <option value="data_cleaning.py">data_cleaning.py</option>
                                 
                             </select>
                         </div>
@@ -131,8 +131,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#FFDEB4", "font": {"color": "black"}, "id": "module1", "label": "module1", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "main.py", "label": "main.py", "shape": "circle", "size": 25, "title": "SUMMARY 11"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "module2.py", "label": "module2.py", "shape": "circle", "size": 25, "title": "SUMMARY 33"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "module1.py", "label": "module1.py", "shape": "circle", "size": 25, "title": "SUMMARY 22fvabdfk vbajdf\nbvladf vlkabf lkv baklbfvl\nabdfv kjbafl vbadbvj\nkladb vjabv"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "module2", "label": "module2", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "main", "label": "main", "shape": "circle", "size": 40, "title": "FOLDER SUMMARY"}]);
-                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "main", "to": "main.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "module1.py", "to": "main.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "module1", "to": "module1.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "module2.py", "to": "module1.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "module2", "to": "module2.py", "width": 3}]);
+                  nodes = new vis.DataSet([{"color": "#FFDEB4", "font": {"color": "black"}, "id": "data_extraction", "label": "data_extraction", "shape": "circle", "size": 40, "title": "FOLDER"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "countplots.py", "label": "countplots.py", "shape": "circle", "size": 25, "title": "FILE"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "cartograms.py.py", "label": "cartograms.py.py", "shape": "circle", "size": 25, "title": "FILE"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "histograms.py", "label": "histograms.py", "shape": "circle", "size": 25, "title": "FILE"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "graphs", "label": "graphs", "shape": "circle", "size": 40, "title": "FOLDER"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "data_cleaning.py", "label": "data_cleaning.py", "shape": "circle", "size": 25, "title": "FILE"}]);
+                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "data_extraction", "to": "data_cleaning.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "graphs", "to": "histograms.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "data_cleaning.py", "to": "histograms.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "graphs", "to": "cartograms.py.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "graphs", "to": "countplots.py", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#57C5B6", "from": "data_cleaning.py", "to": "countplots.py", "width": 3}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
